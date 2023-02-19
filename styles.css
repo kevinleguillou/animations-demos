@@ -18,12 +18,20 @@ body{
 
 .view{
   display: flex;
-  align-items: flex-end;
+  flex-direction: column;
+  justify-content: flex-end;
   width: 256px;
   height: 520px;
   background-color: #0b0d10;
   border-radius: 20px;
   overflow: hidden;
+}
+
+.view-title{
+  margin-top: 20px;
+  margin-bottom: auto;
+  color: white;
+  text-align: center;
 }
 
 .popup{
