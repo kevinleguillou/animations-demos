@@ -1,0 +1,95 @@
+html, body{
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 96px;
+  background-color: #2d343f;
+}
+
+/* Styles */
+
+.view{
+  display: flex;
+  align-items: flex-end;
+  width: 256px;
+  height: 520px;
+  background-color: #0b0d10;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.popup{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 16px;
+  padding: 24px 24px;
+  background-color: white;
+  border-radius: 20px 20px 0 0;
+  overflow: hidden;
+}
+
+.title{
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.text{
+  font-size: 12px;
+  line-height: 125%;
+  color: #2d343f;
+}
+
+.button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 0 20px;
+  height: 36px;
+  border-radius: 36px;
+  background-color: black;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* Animations */
+
+@keyframes fullSlideIn{
+  0%{
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  50%{
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.full .popup{ animation: fullSlideIn 1s ease both infinite; }
+
+@keyframes anticipateSlideIn{
+  0%{
+    transform: translateY(66%);
+    opacity: 0;
+  }
+  0.1%{
+    transform: translateY(66%);
+    opacity: .5;
+  }
+  50%{
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.anticipate .popup{ animation: anticipateSlideIn 1s cubic-bezier(0.16, 1, 0.3, 1) both infinite; }
